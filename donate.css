@@ -8,6 +8,12 @@
   font-optical-sizing: auto;
   font-style: normal;
 }
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .container{
     max-width: 1440px;
     margin: 0 auto;
@@ -35,19 +41,22 @@
 /* header style */
 .header{
     max-width: 1440px;
-    margin: auto; 
+    margin: 0 auto; 
+    border: 1px solid red;
     height: 670px;
     background: linear-gradient(0.00deg, rgb(18, 18, 18),rgba(18, 18, 18, 0) 100%); 
     background-image: url('./images/donation13.jpg');
     background-repeat: no-repeat; 
     background-size: contain; 
     background-position: center;
-    display: flex;
+     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
 }
 .top{
     max-width: 826px;
+    /* height: 320px; */
+    /* padding: 175px 307px; */
     text-align: center;
 }
 .top h1{
@@ -58,9 +67,11 @@
 .top p{
   font-size: 1.125rem;
   color: rgb(255, 255, 255);
-  margin-top: 20px;
-  margin-left: 67px;
-  margin-right: 67px; 
+  max-width: 691px;
+  margin-top: 30px;
+  margin: 0 auto;
+  /* margin-left: 67px;
+  margin-right: 67px;  */
 }
 /* donate section */
 .donate{
@@ -103,12 +114,12 @@
     text-align: center;
     margin: 0 auto;
 }
-.donate-plans h2{
+.donate-plans h2, .contribution h2, .survive h2, .update h2{
     font-size: 3rem;
     font-weight: bold;
     color: #121212;
 }
-.donate-plans p{
+.donate-plans p, .update p{
      max-width: 691px; 
      margin: auto;
     color: #707070;
@@ -144,7 +155,120 @@
     grid-template-columns: repeat(3,1fr);
      gap: 24px; 
 }
+/* Contribution styles */
+.contribution{
+    max-width: 1032px;
+    max-height: 477px;
+    margin: 0 auto;
+    display: flex;
+    gap: 83px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.contribution-left{
+    max-width: 493px;
+}
+.contribution-right img{
+    /* max-width: 456px;
+    max-height: 477px;  */
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 5px;
+}
+.contribution p{
+    color: #707070;
+    font-size: 1.125rem;
+    margin-top: 20px;
+}
 
+/* survive section */
+.survive{
+    max-width: 1032px;
+    /* max-height: 477px; */
+    margin: 0 auto;
+    display: flex;
+    gap: 83px;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 100px; */
+    margin-bottom: 100px;
+}
+.survive-right{
+    max-width: 493px;
+}
+.survive p{
+    color: #707070;
+    font-size: 1.125rem;
+    margin-top: 20px;
+}
+.survive-left{
+     max-width: 456px;
+    max-height: 477px; 
+}
+.survive-left img{
+    width: 100%;
+    height: 100%; 
+    border-radius: 5px;
+}
+
+/* update section */
+.update{
+    max-width: 809px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 130px;
+}
+.update-input{
+    /* max-width: 809px;
+    max-height: 200px; */
+    padding: 76px 188px;
+    background-color: #FFF4D6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.update-input input{
+    background-color: #D9D9D9;
+    /* max-width: 275px; */
+    /* max-height: 48px; */
+    font-weight: 500;
+    color: #AA9F9F;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    padding: 15px 179px 15px 17px;
+}
+.update button{
+  border-radius: 0 5px 5px 0;
+  padding: 14px 42px;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 0;
+}
+/* footer section */
+footer{
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 177px;
+    background-color: #0B0D17;
+    text-align: center;
+    /* padding: 43px 629px 42px 653px; */
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+footer h2{
+    color: #FF5959;
+    font-size: 2.25rem;
+    /* margin-bottom: 24px; */
+}
+footer p{
+    font-size: 0.875rem;
+    color: #D9DBE1;
+}
 
 /* responsive for mobile device */
 @media screen and (max-width: 576px) {
@@ -154,6 +278,23 @@
         /* justify-items: center; */
         text-align: center;
         background-size: 100%; 
+    }
+    .contribution{
+        flex-direction: column-reverse;
+        gap: 10px;
+        height: auto;
+        margin-top: 130px;
+        margin-bottom: 20px;
+        padding: 15px;
+        text-align: center;
+    }
+    .survive{
+        flex-direction: column;
+        margin-top: 130px;
+        gap: 10px;
+        text-align: center;
+        height: auto;
+        padding: 15px;
     }
     .donate-cards{
         grid-template-columns: 1fr;
@@ -197,9 +338,28 @@
     .donate-card{
         padding: 15px;
     }
-    .donate-plans p{
+    .donate-plans p, .update p{
         margin-bottom: 20px;
         width: 100%;
+    }
+    .update-input{
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 30px;
+    }
+    .update{
+        justify-items: center;
+    }
+    .update-input input{
+        padding: 15px 100px 15px 17px;
+    }
+    .update button{
+        padding: 15px 25px;
+    }
+    footer{
+        height: auto;
+        justify-items: center;
+        padding:  43px 70px 42px 70px;
     }
     
 }
