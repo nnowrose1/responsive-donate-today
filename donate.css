@@ -47,7 +47,7 @@
     background: linear-gradient(0.00deg, rgb(18, 18, 18),rgba(18, 18, 18, 0) 100%); 
     background-image: url('./images/donation13.jpg');
     background-repeat: no-repeat; 
-    background-size: contain; 
+    background-size: cover; 
     background-position: center;
      display: flex;
     justify-content: center;
